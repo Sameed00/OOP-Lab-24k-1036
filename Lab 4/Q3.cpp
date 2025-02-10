@@ -3,15 +3,14 @@ using namespace std;
 
 class Account{
 	private:
-		string accountHolderName;
-		int accountNumber;
+		string accountHolderName, accountNumber;
 		double balance;
 	
 	public:
 		Account(){
 			balance = 0.0;
 		}
-		Account(int aN, string aH, double b){
+		Account(string aN, string aH, double b){
 			accountNumber= aN;
 			accountHolderName = aH;
 			balance = b;
@@ -36,9 +35,9 @@ int main(){
 	Account a1;
 	Account a2;
 	Account a3;
-	a1 = Account(1234,"Sameed",1000.24);
-	a2 = Account(1456,"Ali",20.54);
-	a3 = Account(002,"Faraz",0);
+	a1 = Account("1234","Sameed",1000.24);
+	a2 = Account("1456","Ali",20.54);
+	a3 = Account("002","Faraz",0);
 	a1.deposit(20.69);
 	a1.withdraw(350.420);
 	a1.checkBalance();
